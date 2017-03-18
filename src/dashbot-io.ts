@@ -18,7 +18,7 @@ export class DashbotIo {
     this.DASHBOT_API_KEY_GENERIC = DASHBOT_API_KEY_GENERIC
   }
 
-  public outgoing(content) {
+  public outgoing() {
     request({
         uri: 'https://tracker.dashbot.io/track?platform=generic&v=0.8.2-rest&type=incoming&apiKey=' + this.DASHBOT_API_KEY_GENERIC,
         qs: {
@@ -29,7 +29,7 @@ export class DashbotIo {
         },
         method: 'POST',
         json: {
-            text: content,
+            text: this.message,
             userId: this.contact.name(),
         },
     })
@@ -46,7 +46,7 @@ export class DashbotIo {
         },
         method: 'POST',
         json: {
-            text: this.content,
+            text: this.message,
             userId: this.contact.name(),
         },
     })
