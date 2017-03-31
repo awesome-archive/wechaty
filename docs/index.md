@@ -262,7 +262,6 @@ Class Contact
         * [.avatar()](#Contact+avatar) ⇒ <code>Promise.&lt;NodeJS.ReadableStream&gt;</code>
         * [.refresh()](#Contact+refresh) ⇒ <code>Promise.&lt;this&gt;</code>
         * [.self()](#Contact+self) ⇒ <code>boolean</code>
-        * [.alias(empty)](#Contact+alias) ⇒ <code>Promise.&lt;boolean&gt;</code>
         * [.say(content)](#Contact+say) ⇒ <code>Promise.&lt;void&gt;</code>
     * _static_
         * [.findAll([queryArg])](#Contact.findAll) ⇒ <code>Promise.&lt;Array.&lt;Contact&gt;&gt;</code>
@@ -377,26 +376,6 @@ Check if contact is self
 **Example**  
 ```ts
 const isSelf = contact.self()
-```
-<a name="Contact+alias"></a>
-
-### contact.alias(empty) ⇒ <code>Promise.&lt;boolean&gt;</code>
-Delete the alias for a contact
-
-**Kind**: instance method of <code>[Contact](#Contact)</code>  
-
-| Param | Type |
-| --- | --- |
-| empty | <code>null</code> | 
-
-**Example**  
-```ts
-const ret = await contact.remark(null)
-if (ret) {
-  console.log('ok!')
-} else {
-  console.error('fail!')
-}
 ```
 <a name="Contact+say"></a>
 
